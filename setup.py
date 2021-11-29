@@ -20,8 +20,8 @@ VERSION = "1.0.0"
 # http://pypi.python.org/pypi/setuptools
 
 REQUIRES = [
-    "urllib3 >= 1.25.3",
-    "python-dateutil",
+  "urllib3 >= 1.25.3",
+  "python-dateutil",
 ]
 
 setup(
@@ -39,5 +39,5 @@ setup(
     license="Janssen License",
     long_description="""\
     Janssen SCIM 2.0 server API. Developers can think of SCIM as a REST API with endpoints exposing CRUD functionality (create, update, retrieve and delete) for identity management resources such as users, groups, and fido devices.   # noqa: E501
-    """,
+    """
 )

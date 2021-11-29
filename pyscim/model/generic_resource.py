@@ -46,23 +46,22 @@ def lazy_import():
     from pyscim.model.role import Role
     from pyscim.model.user_resource import UserResource
     from pyscim.model.x509_certificate import X509Certificate
-
-    globals()["Address"] = Address
-    globals()["Email"] = Email
-    globals()["Entitlement"] = Entitlement
-    globals()["Fido2DeviceResource"] = Fido2DeviceResource
-    globals()["FidoDeviceResource"] = FidoDeviceResource
-    globals()["Group"] = Group
-    globals()["GroupResource"] = GroupResource
-    globals()["InstantMessagingAddress"] = InstantMessagingAddress
-    globals()["Member"] = Member
-    globals()["Meta"] = Meta
-    globals()["Name"] = Name
-    globals()["PhoneNumber"] = PhoneNumber
-    globals()["Photo"] = Photo
-    globals()["Role"] = Role
-    globals()["UserResource"] = UserResource
-    globals()["X509Certificate"] = X509Certificate
+    globals()['Address'] = Address
+    globals()['Email'] = Email
+    globals()['Entitlement'] = Entitlement
+    globals()['Fido2DeviceResource'] = Fido2DeviceResource
+    globals()['FidoDeviceResource'] = FidoDeviceResource
+    globals()['Group'] = Group
+    globals()['GroupResource'] = GroupResource
+    globals()['InstantMessagingAddress'] = InstantMessagingAddress
+    globals()['Member'] = Member
+    globals()['Meta'] = Meta
+    globals()['Name'] = Name
+    globals()['PhoneNumber'] = PhoneNumber
+    globals()['Photo'] = Photo
+    globals()['Role'] = Role
+    globals()['UserResource'] = UserResource
+    globals()['X509Certificate'] = X509Certificate
 
 
 class GenericResource(ModelComposed):
@@ -90,13 +89,14 @@ class GenericResource(ModelComposed):
     """
 
     allowed_values = {
-        ("status",): {
-            "REGISTERED": "registered",
-            "PENDING": "pending",
+        ('status',): {
+            'REGISTERED': "registered",
+            'PENDING': "pending",
         },
     }
 
-    validations = {}
+    validations = {
+    }
 
     @cached_property
     def additional_properties_type():
@@ -105,17 +105,7 @@ class GenericResource(ModelComposed):
         of type self, this must run after the class is loaded
         """
         lazy_import()
-        return (
-            bool,
-            date,
-            datetime,
-            dict,
-            float,
-            int,
-            list,
-            str,
-            none_type,
-        )  # noqa: E501
+        return (bool, date, datetime, dict, float, int, list, str, none_type,)  # noqa: E501
 
     _nullable = False
 
@@ -131,94 +121,94 @@ class GenericResource(ModelComposed):
         """
         lazy_import()
         return {
-            "schemas": ([str],),  # noqa: E501
-            "id": (str,),  # noqa: E501
-            "meta": (Meta,),  # noqa: E501
-            "display_name": (str,),  # noqa: E501
-            "members": ([Member],),  # noqa: E501
-            "external_id": (str,),  # noqa: E501
-            "user_name": (str,),  # noqa: E501
-            "name": (Name,),  # noqa: E501
-            "nick_name": (str,),  # noqa: E501
-            "profile_url": (str,),  # noqa: E501
-            "title": (str,),  # noqa: E501
-            "user_type": (str,),  # noqa: E501
-            "preferred_language": (str,),  # noqa: E501
-            "locale": (str,),  # noqa: E501
-            "timezone": (str,),  # noqa: E501
-            "active": (bool,),  # noqa: E501
-            "password": (str,),  # noqa: E501
-            "emails": ([Email],),  # noqa: E501
-            "phone_numbers": ([PhoneNumber],),  # noqa: E501
-            "ims": ([InstantMessagingAddress],),  # noqa: E501
-            "photos": ([Photo],),  # noqa: E501
-            "addresses": ([Address],),  # noqa: E501
-            "groups": ([Group],),  # noqa: E501
-            "entitlements": ([Entitlement],),  # noqa: E501
-            "roles": ([Role],),  # noqa: E501
-            "x509_certificates": ([X509Certificate],),  # noqa: E501
-            "urnietfparamsscimschemasextensiongluu2_0_user": (
-                {str: (bool, date, datetime, dict, float, int, list, str, none_type)},
-            ),  # noqa: E501
-            "user_id": (str,),  # noqa: E501
-            "creation_date": (datetime,),  # noqa: E501
-            "application": (str,),  # noqa: E501
-            "counter": (int,),  # noqa: E501
-            "device_data": (str,),  # noqa: E501
-            "device_hash_code": (int,),  # noqa: E501
-            "device_key_handle": (str,),  # noqa: E501
-            "device_registration_conf": (str,),  # noqa: E501
-            "last_access_time": (datetime,),  # noqa: E501
-            "status": (str,),  # noqa: E501
-            "description": (str,),  # noqa: E501
+            'schemas': ([str],),  # noqa: E501
+            'id': (str,),  # noqa: E501
+            'meta': (Meta,),  # noqa: E501
+            'display_name': (str,),  # noqa: E501
+            'members': ([Member],),  # noqa: E501
+            'external_id': (str,),  # noqa: E501
+            'user_name': (str,),  # noqa: E501
+            'name': (Name,),  # noqa: E501
+            'nick_name': (str,),  # noqa: E501
+            'profile_url': (str,),  # noqa: E501
+            'title': (str,),  # noqa: E501
+            'user_type': (str,),  # noqa: E501
+            'preferred_language': (str,),  # noqa: E501
+            'locale': (str,),  # noqa: E501
+            'timezone': (str,),  # noqa: E501
+            'active': (bool,),  # noqa: E501
+            'password': (str,),  # noqa: E501
+            'emails': ([Email],),  # noqa: E501
+            'phone_numbers': ([PhoneNumber],),  # noqa: E501
+            'ims': ([InstantMessagingAddress],),  # noqa: E501
+            'photos': ([Photo],),  # noqa: E501
+            'addresses': ([Address],),  # noqa: E501
+            'groups': ([Group],),  # noqa: E501
+            'entitlements': ([Entitlement],),  # noqa: E501
+            'roles': ([Role],),  # noqa: E501
+            'x509_certificates': ([X509Certificate],),  # noqa: E501
+            'urnietfparamsscimschemasextensiongluu2_0_user': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'user_id': (str,),  # noqa: E501
+            'creation_date': (datetime,),  # noqa: E501
+            'application': (str,),  # noqa: E501
+            'counter': (int,),  # noqa: E501
+            'device_data': (str,),  # noqa: E501
+            'device_hash_code': (int,),  # noqa: E501
+            'device_key_handle': (str,),  # noqa: E501
+            'device_registration_conf': (str,),  # noqa: E501
+            'last_access_time': (datetime,),  # noqa: E501
+            'status': (str,),  # noqa: E501
+            'description': (str,),  # noqa: E501
         }
 
     @cached_property
     def discriminator():
         return None
 
+
     attribute_map = {
-        "schemas": "schemas",  # noqa: E501
-        "id": "id",  # noqa: E501
-        "meta": "meta",  # noqa: E501
-        "display_name": "displayName",  # noqa: E501
-        "members": "members",  # noqa: E501
-        "external_id": "externalId",  # noqa: E501
-        "user_name": "userName",  # noqa: E501
-        "name": "name",  # noqa: E501
-        "nick_name": "nickName",  # noqa: E501
-        "profile_url": "profileUrl",  # noqa: E501
-        "title": "title",  # noqa: E501
-        "user_type": "userType",  # noqa: E501
-        "preferred_language": "preferredLanguage",  # noqa: E501
-        "locale": "locale",  # noqa: E501
-        "timezone": "timezone",  # noqa: E501
-        "active": "active",  # noqa: E501
-        "password": "password",  # noqa: E501
-        "emails": "emails",  # noqa: E501
-        "phone_numbers": "phoneNumbers",  # noqa: E501
-        "ims": "ims",  # noqa: E501
-        "photos": "photos",  # noqa: E501
-        "addresses": "addresses",  # noqa: E501
-        "groups": "groups",  # noqa: E501
-        "entitlements": "entitlements",  # noqa: E501
-        "roles": "roles",  # noqa: E501
-        "x509_certificates": "x509Certificates",  # noqa: E501
-        "urnietfparamsscimschemasextensiongluu2_0_user": "urn:ietf:params:scim:schemas:extension:gluu:2.0:User",  # noqa: E501
-        "user_id": "userId",  # noqa: E501
-        "creation_date": "creationDate",  # noqa: E501
-        "application": "application",  # noqa: E501
-        "counter": "counter",  # noqa: E501
-        "device_data": "deviceData",  # noqa: E501
-        "device_hash_code": "deviceHashCode",  # noqa: E501
-        "device_key_handle": "deviceKeyHandle",  # noqa: E501
-        "device_registration_conf": "deviceRegistrationConf",  # noqa: E501
-        "last_access_time": "lastAccessTime",  # noqa: E501
-        "status": "status",  # noqa: E501
-        "description": "description",  # noqa: E501
+        'schemas': 'schemas',  # noqa: E501
+        'id': 'id',  # noqa: E501
+        'meta': 'meta',  # noqa: E501
+        'display_name': 'displayName',  # noqa: E501
+        'members': 'members',  # noqa: E501
+        'external_id': 'externalId',  # noqa: E501
+        'user_name': 'userName',  # noqa: E501
+        'name': 'name',  # noqa: E501
+        'nick_name': 'nickName',  # noqa: E501
+        'profile_url': 'profileUrl',  # noqa: E501
+        'title': 'title',  # noqa: E501
+        'user_type': 'userType',  # noqa: E501
+        'preferred_language': 'preferredLanguage',  # noqa: E501
+        'locale': 'locale',  # noqa: E501
+        'timezone': 'timezone',  # noqa: E501
+        'active': 'active',  # noqa: E501
+        'password': 'password',  # noqa: E501
+        'emails': 'emails',  # noqa: E501
+        'phone_numbers': 'phoneNumbers',  # noqa: E501
+        'ims': 'ims',  # noqa: E501
+        'photos': 'photos',  # noqa: E501
+        'addresses': 'addresses',  # noqa: E501
+        'groups': 'groups',  # noqa: E501
+        'entitlements': 'entitlements',  # noqa: E501
+        'roles': 'roles',  # noqa: E501
+        'x509_certificates': 'x509Certificates',  # noqa: E501
+        'urnietfparamsscimschemasextensiongluu2_0_user': 'urn:ietf:params:scim:schemas:extension:gluu:2.0:User',  # noqa: E501
+        'user_id': 'userId',  # noqa: E501
+        'creation_date': 'creationDate',  # noqa: E501
+        'application': 'application',  # noqa: E501
+        'counter': 'counter',  # noqa: E501
+        'device_data': 'deviceData',  # noqa: E501
+        'device_hash_code': 'deviceHashCode',  # noqa: E501
+        'device_key_handle': 'deviceKeyHandle',  # noqa: E501
+        'device_registration_conf': 'deviceRegistrationConf',  # noqa: E501
+        'last_access_time': 'lastAccessTime',  # noqa: E501
+        'status': 'status',  # noqa: E501
+        'description': 'description',  # noqa: E501
     }
 
-    read_only_vars = {}
+    read_only_vars = {
+    }
 
     @classmethod
     @convert_js_args_to_python_args
@@ -296,18 +286,17 @@ class GenericResource(ModelComposed):
             description (str): [optional]  # noqa: E501
         """
 
-        _check_type = kwargs.pop("_check_type", True)
-        _spec_property_naming = kwargs.pop("_spec_property_naming", False)
-        _path_to_item = kwargs.pop("_path_to_item", ())
-        _configuration = kwargs.pop("_configuration", None)
-        _visited_composed_classes = kwargs.pop("_visited_composed_classes", ())
+        _check_type = kwargs.pop('_check_type', True)
+        _spec_property_naming = kwargs.pop('_spec_property_naming', False)
+        _path_to_item = kwargs.pop('_path_to_item', ())
+        _configuration = kwargs.pop('_configuration', None)
+        _visited_composed_classes = kwargs.pop('_visited_composed_classes', ())
 
         self = super(OpenApiModel, cls).__new__(cls)
 
         if args:
             raise ApiTypeError(
-                "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments."
-                % (
+                "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments." % (
                     args,
                     self.__class__.__name__,
                 ),
@@ -323,44 +312,41 @@ class GenericResource(ModelComposed):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         constant_args = {
-            "_check_type": _check_type,
-            "_path_to_item": _path_to_item,
-            "_spec_property_naming": _spec_property_naming,
-            "_configuration": _configuration,
-            "_visited_composed_classes": self._visited_composed_classes,
+            '_check_type': _check_type,
+            '_path_to_item': _path_to_item,
+            '_spec_property_naming': _spec_property_naming,
+            '_configuration': _configuration,
+            '_visited_composed_classes': self._visited_composed_classes,
         }
-        composed_info = validate_get_composed_info(constant_args, kwargs, self)
+        composed_info = validate_get_composed_info(
+            constant_args, kwargs, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
         discarded_args = composed_info[3]
 
         for var_name, var_value in kwargs.items():
-            if (
-                var_name in discarded_args
-                and self._configuration is not None
-                and self._configuration.discard_unknown_keys
-                and self._additional_properties_model_instances
-            ):
+            if var_name in discarded_args and \
+                        self._configuration is not None and \
+                        self._configuration.discard_unknown_keys and \
+                        self._additional_properties_model_instances:
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
 
         return self
 
-    required_properties = set(
-        [
-            "_data_store",
-            "_check_type",
-            "_spec_property_naming",
-            "_path_to_item",
-            "_configuration",
-            "_visited_composed_classes",
-            "_composed_instances",
-            "_var_name_to_model_instances",
-            "_additional_properties_model_instances",
-        ]
-    )
+    required_properties = set([
+        '_data_store',
+        '_check_type',
+        '_spec_property_naming',
+        '_path_to_item',
+        '_configuration',
+        '_visited_composed_classes',
+        '_composed_instances',
+        '_var_name_to_model_instances',
+        '_additional_properties_model_instances',
+    ])
 
     @convert_js_args_to_python_args
     def __init__(self, *args, **kwargs):  # noqa: E501
@@ -437,16 +423,15 @@ class GenericResource(ModelComposed):
             description (str): [optional]  # noqa: E501
         """
 
-        _check_type = kwargs.pop("_check_type", True)
-        _spec_property_naming = kwargs.pop("_spec_property_naming", False)
-        _path_to_item = kwargs.pop("_path_to_item", ())
-        _configuration = kwargs.pop("_configuration", None)
-        _visited_composed_classes = kwargs.pop("_visited_composed_classes", ())
+        _check_type = kwargs.pop('_check_type', True)
+        _spec_property_naming = kwargs.pop('_spec_property_naming', False)
+        _path_to_item = kwargs.pop('_path_to_item', ())
+        _configuration = kwargs.pop('_configuration', None)
+        _visited_composed_classes = kwargs.pop('_visited_composed_classes', ())
 
         if args:
             raise ApiTypeError(
-                "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments."
-                % (
+                "Invalid positional arguments=%s passed to %s. Remove those invalid positional arguments." % (
                     args,
                     self.__class__.__name__,
                 ),
@@ -462,33 +447,30 @@ class GenericResource(ModelComposed):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         constant_args = {
-            "_check_type": _check_type,
-            "_path_to_item": _path_to_item,
-            "_spec_property_naming": _spec_property_naming,
-            "_configuration": _configuration,
-            "_visited_composed_classes": self._visited_composed_classes,
+            '_check_type': _check_type,
+            '_path_to_item': _path_to_item,
+            '_spec_property_naming': _spec_property_naming,
+            '_configuration': _configuration,
+            '_visited_composed_classes': self._visited_composed_classes,
         }
-        composed_info = validate_get_composed_info(constant_args, kwargs, self)
+        composed_info = validate_get_composed_info(
+            constant_args, kwargs, self)
         self._composed_instances = composed_info[0]
         self._var_name_to_model_instances = composed_info[1]
         self._additional_properties_model_instances = composed_info[2]
         discarded_args = composed_info[3]
 
         for var_name, var_value in kwargs.items():
-            if (
-                var_name in discarded_args
-                and self._configuration is not None
-                and self._configuration.discard_unknown_keys
-                and self._additional_properties_model_instances
-            ):
+            if var_name in discarded_args and \
+                        self._configuration is not None and \
+                        self._configuration.discard_unknown_keys and \
+                        self._additional_properties_model_instances:
                 # discard variable.
                 continue
             setattr(self, var_name, var_value)
             if var_name in self.read_only_vars:
-                raise ApiAttributeError(
-                    f"`{var_name}` is a read-only attribute. Use `from_openapi_data` to instantiate "
-                    f"class with read only attributes."
-                )
+                raise ApiAttributeError(f"`{var_name}` is a read-only attribute. Use `from_openapi_data` to instantiate "
+                                     f"class with read only attributes.")
 
     @cached_property
     def _composed_schemas():
@@ -501,12 +483,14 @@ class GenericResource(ModelComposed):
         # loading
         lazy_import()
         return {
-            "anyOf": [],
-            "allOf": [],
-            "oneOf": [
-                Fido2DeviceResource,
-                FidoDeviceResource,
-                GroupResource,
-                UserResource,
-            ],
+          'anyOf': [
+          ],
+          'allOf': [
+          ],
+          'oneOf': [
+              Fido2DeviceResource,
+              FidoDeviceResource,
+              GroupResource,
+              UserResource,
+          ],
         }

@@ -19,7 +19,7 @@ from pyscim.model_utils import (  # noqa: F401
     datetime,
     file_type,
     none_type,
-    validate_and_convert_types,
+    validate_and_convert_types
 )
 from pyscim.model.bulk_data import BulkData
 from pyscim.model.bulk_request import BulkRequest
@@ -39,44 +39,64 @@ class DefaultApi(object):
         self.api_client = api_client
         self.bulk_post_endpoint = _Endpoint(
             settings={
-                "response_type": (BulkData,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Bulk",
-                "operation_id": "bulk_post",
-                "http_method": "POST",
-                "servers": None,
+                'response_type': (BulkData,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Bulk',
+                'operation_id': 'bulk_post',
+                'http_method': 'POST',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "request",
+                'all': [
+                    'request',
                 ],
-                "required": [
-                    "request",
+                'required': [
+                    'request',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "request": (BulkRequest,),
+                'validations': {
                 },
-                "attribute_map": {},
-                "location_map": {
-                    "request": "body",
+                'allowed_values': {
                 },
-                "collection_format_map": {},
+                'openapi_types': {
+                    'request':
+                        (BulkRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'request': 'body',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": ["application/scim+json", "application/json"],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/scim+json',
+                    'application/json'
+                ]
             },
-            api_client=api_client,
+            api_client=api_client
         )
 
-    def bulk_post(self, request, **kwargs):
+    def bulk_post(
+        self,
+        request,
+        **kwargs
+    ):
         """bulk_post  # noqa: E501
 
         Send several resource operations in a single request (see section 3.7 of RFC 7644)  # noqa: E501
@@ -115,12 +135,26 @@ class DefaultApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["request"] = request
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['request'] = \
+            request
         return self.bulk_post_endpoint.call_with_http_info(**kwargs)
+

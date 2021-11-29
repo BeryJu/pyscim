@@ -19,7 +19,7 @@ from pyscim.model_utils import (  # noqa: F401
     datetime,
     file_type,
     none_type,
-    validate_and_convert_types,
+    validate_and_convert_types
 )
 from pyscim.model.error_response import ErrorResponse
 from pyscim.model.patch_request import PatchRequest
@@ -41,345 +41,462 @@ class UserApi(object):
         self.api_client = api_client
         self.create_user_endpoint = _Endpoint(
             settings={
-                "response_type": (UserResource,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users",
-                "operation_id": "create_user",
-                "http_method": "POST",
-                "servers": None,
+                'response_type': (UserResource,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users',
+                'operation_id': 'create_user',
+                'http_method': 'POST',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "user",
-                    "attributes",
-                    "excluded_attributes",
+                'all': [
+                    'user',
+                    'attributes',
+                    'excluded_attributes',
                 ],
-                "required": [
-                    "user",
+                'required': [
+                    'user',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "user": (UserResource,),
-                    "attributes": (str,),
-                    "excluded_attributes": (str,),
+                'validations': {
                 },
-                "attribute_map": {
-                    "attributes": "attributes",
-                    "excluded_attributes": "excludedAttributes",
+                'allowed_values': {
                 },
-                "location_map": {
-                    "user": "body",
-                    "attributes": "query",
-                    "excluded_attributes": "query",
+                'openapi_types': {
+                    'user':
+                        (UserResource,),
+                    'attributes':
+                        (str,),
+                    'excluded_attributes':
+                        (str,),
                 },
-                "collection_format_map": {},
+                'attribute_map': {
+                    'attributes': 'attributes',
+                    'excluded_attributes': 'excludedAttributes',
+                },
+                'location_map': {
+                    'user': 'body',
+                    'attributes': 'query',
+                    'excluded_attributes': 'query',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": ["application/scim+json", "application/json"],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/scim+json',
+                    'application/json'
+                ]
             },
-            api_client=api_client,
+            api_client=api_client
         )
         self.delete_user_by_id_endpoint = _Endpoint(
             settings={
-                "response_type": None,
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users/{id}",
-                "operation_id": "delete_user_by_id",
-                "http_method": "DELETE",
-                "servers": None,
+                'response_type': None,
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users/{id}',
+                'operation_id': 'delete_user_by_id',
+                'http_method': 'DELETE',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "id",
+                'all': [
+                    'id',
                 ],
-                "required": [
-                    "id",
+                'required': [
+                    'id',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "id": (str,),
+                'validations': {
                 },
-                "attribute_map": {
-                    "id": "id",
+                'allowed_values': {
                 },
-                "location_map": {
-                    "id": "path",
+                'openapi_types': {
+                    'id':
+                        (str,),
                 },
-                "collection_format_map": {},
+                'attribute_map': {
+                    'id': 'id',
+                },
+                'location_map': {
+                    'id': 'path',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": [],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [],
             },
-            api_client=api_client,
+            api_client=api_client
         )
         self.get_user_by_id_endpoint = _Endpoint(
             settings={
-                "response_type": (UserResource,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users/{id}",
-                "operation_id": "get_user_by_id",
-                "http_method": "GET",
-                "servers": None,
+                'response_type': (UserResource,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users/{id}',
+                'operation_id': 'get_user_by_id',
+                'http_method': 'GET',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "id",
-                    "attributes",
-                    "excluded_attributes",
+                'all': [
+                    'id',
+                    'attributes',
+                    'excluded_attributes',
                 ],
-                "required": [
-                    "id",
+                'required': [
+                    'id',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "id": (str,),
-                    "attributes": (str,),
-                    "excluded_attributes": (str,),
+                'validations': {
                 },
-                "attribute_map": {
-                    "id": "id",
-                    "attributes": "attributes",
-                    "excluded_attributes": "excludedAttributes",
+                'allowed_values': {
                 },
-                "location_map": {
-                    "id": "path",
-                    "attributes": "query",
-                    "excluded_attributes": "query",
+                'openapi_types': {
+                    'id':
+                        (str,),
+                    'attributes':
+                        (str,),
+                    'excluded_attributes':
+                        (str,),
                 },
-                "collection_format_map": {},
+                'attribute_map': {
+                    'id': 'id',
+                    'attributes': 'attributes',
+                    'excluded_attributes': 'excludedAttributes',
+                },
+                'location_map': {
+                    'id': 'path',
+                    'attributes': 'query',
+                    'excluded_attributes': 'query',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": [],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [],
             },
-            api_client=api_client,
+            api_client=api_client
         )
         self.get_users_endpoint = _Endpoint(
             settings={
-                "response_type": (UserListResponse,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users",
-                "operation_id": "get_users",
-                "http_method": "GET",
-                "servers": None,
+                'response_type': (UserListResponse,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users',
+                'operation_id': 'get_users',
+                'http_method': 'GET',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "attributes",
-                    "excluded_attributes",
-                    "filter",
-                    "start_index",
-                    "count",
-                    "sort_by",
-                    "sort_order",
+                'all': [
+                    'attributes',
+                    'excluded_attributes',
+                    'filter',
+                    'start_index',
+                    'count',
+                    'sort_by',
+                    'sort_order',
                 ],
-                "required": [],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "attributes": (str,),
-                    "excluded_attributes": (str,),
-                    "filter": (str,),
-                    "start_index": (int,),
-                    "count": (int,),
-                    "sort_by": (str,),
-                    "sort_order": (str,),
+                'validations': {
                 },
-                "attribute_map": {
-                    "attributes": "attributes",
-                    "excluded_attributes": "excludedAttributes",
-                    "filter": "filter",
-                    "start_index": "startIndex",
-                    "count": "count",
-                    "sort_by": "sortBy",
-                    "sort_order": "sortOrder",
+                'allowed_values': {
                 },
-                "location_map": {
-                    "attributes": "query",
-                    "excluded_attributes": "query",
-                    "filter": "query",
-                    "start_index": "query",
-                    "count": "query",
-                    "sort_by": "query",
-                    "sort_order": "query",
+                'openapi_types': {
+                    'attributes':
+                        (str,),
+                    'excluded_attributes':
+                        (str,),
+                    'filter':
+                        (str,),
+                    'start_index':
+                        (int,),
+                    'count':
+                        (int,),
+                    'sort_by':
+                        (str,),
+                    'sort_order':
+                        (str,),
                 },
-                "collection_format_map": {},
+                'attribute_map': {
+                    'attributes': 'attributes',
+                    'excluded_attributes': 'excludedAttributes',
+                    'filter': 'filter',
+                    'start_index': 'startIndex',
+                    'count': 'count',
+                    'sort_by': 'sortBy',
+                    'sort_order': 'sortOrder',
+                },
+                'location_map': {
+                    'attributes': 'query',
+                    'excluded_attributes': 'query',
+                    'filter': 'query',
+                    'start_index': 'query',
+                    'count': 'query',
+                    'sort_by': 'query',
+                    'sort_order': 'query',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": [],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [],
             },
-            api_client=api_client,
+            api_client=api_client
         )
         self.patch_user_by_id_endpoint = _Endpoint(
             settings={
-                "response_type": (UserResource,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users/{id}",
-                "operation_id": "patch_user_by_id",
-                "http_method": "PATCH",
-                "servers": None,
+                'response_type': (UserResource,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users/{id}',
+                'operation_id': 'patch_user_by_id',
+                'http_method': 'PATCH',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "id",
-                    "request",
-                    "attributes",
-                    "excluded_attributes",
+                'all': [
+                    'id',
+                    'request',
+                    'attributes',
+                    'excluded_attributes',
                 ],
-                "required": [
-                    "id",
-                    "request",
+                'required': [
+                    'id',
+                    'request',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "id": (str,),
-                    "request": (PatchRequest,),
-                    "attributes": (str,),
-                    "excluded_attributes": (str,),
+                'validations': {
                 },
-                "attribute_map": {
-                    "id": "id",
-                    "attributes": "attributes",
-                    "excluded_attributes": "excludedAttributes",
+                'allowed_values': {
                 },
-                "location_map": {
-                    "id": "path",
-                    "request": "body",
-                    "attributes": "query",
-                    "excluded_attributes": "query",
+                'openapi_types': {
+                    'id':
+                        (str,),
+                    'request':
+                        (PatchRequest,),
+                    'attributes':
+                        (str,),
+                    'excluded_attributes':
+                        (str,),
                 },
-                "collection_format_map": {},
+                'attribute_map': {
+                    'id': 'id',
+                    'attributes': 'attributes',
+                    'excluded_attributes': 'excludedAttributes',
+                },
+                'location_map': {
+                    'id': 'path',
+                    'request': 'body',
+                    'attributes': 'query',
+                    'excluded_attributes': 'query',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": ["application/scim+json", "application/json"],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/scim+json',
+                    'application/json'
+                ]
             },
-            api_client=api_client,
+            api_client=api_client
         )
         self.search_user_endpoint = _Endpoint(
             settings={
-                "response_type": (UserListResponse,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users/.search",
-                "operation_id": "search_user",
-                "http_method": "POST",
-                "servers": None,
+                'response_type': (UserListResponse,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users/.search',
+                'operation_id': 'search_user',
+                'http_method': 'POST',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "search_request",
+                'all': [
+                    'search_request',
                 ],
-                "required": [
-                    "search_request",
+                'required': [
+                    'search_request',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "search_request": (SearchRequest,),
+                'validations': {
                 },
-                "attribute_map": {},
-                "location_map": {
-                    "search_request": "body",
+                'allowed_values': {
                 },
-                "collection_format_map": {},
+                'openapi_types': {
+                    'search_request':
+                        (SearchRequest,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'search_request': 'body',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": ["application/scim+json", "application/json"],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/scim+json',
+                    'application/json'
+                ]
             },
-            api_client=api_client,
+            api_client=api_client
         )
         self.update_user_by_id_endpoint = _Endpoint(
             settings={
-                "response_type": (UserResource,),
-                "auth": ["scim_oauth"],
-                "endpoint_path": "/Users/{id}",
-                "operation_id": "update_user_by_id",
-                "http_method": "PUT",
-                "servers": None,
+                'response_type': (UserResource,),
+                'auth': [
+                    'scim_oauth'
+                ],
+                'endpoint_path': '/Users/{id}',
+                'operation_id': 'update_user_by_id',
+                'http_method': 'PUT',
+                'servers': None,
             },
             params_map={
-                "all": [
-                    "id",
-                    "user",
-                    "attributes",
-                    "excluded_attributes",
+                'all': [
+                    'id',
+                    'user',
+                    'attributes',
+                    'excluded_attributes',
                 ],
-                "required": [
-                    "id",
-                    "user",
+                'required': [
+                    'id',
+                    'user',
                 ],
-                "nullable": [],
-                "enum": [],
-                "validation": [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
             },
             root_map={
-                "validations": {},
-                "allowed_values": {},
-                "openapi_types": {
-                    "id": (str,),
-                    "user": (UserResource,),
-                    "attributes": (str,),
-                    "excluded_attributes": (str,),
+                'validations': {
                 },
-                "attribute_map": {
-                    "id": "id",
-                    "attributes": "attributes",
-                    "excluded_attributes": "excludedAttributes",
+                'allowed_values': {
                 },
-                "location_map": {
-                    "id": "path",
-                    "user": "body",
-                    "attributes": "query",
-                    "excluded_attributes": "query",
+                'openapi_types': {
+                    'id':
+                        (str,),
+                    'user':
+                        (UserResource,),
+                    'attributes':
+                        (str,),
+                    'excluded_attributes':
+                        (str,),
                 },
-                "collection_format_map": {},
+                'attribute_map': {
+                    'id': 'id',
+                    'attributes': 'attributes',
+                    'excluded_attributes': 'excludedAttributes',
+                },
+                'location_map': {
+                    'id': 'path',
+                    'user': 'body',
+                    'attributes': 'query',
+                    'excluded_attributes': 'query',
+                },
+                'collection_format_map': {
+                }
             },
             headers_map={
-                "accept": ["application/scim+json", "application/json"],
-                "content_type": ["application/scim+json", "application/json"],
+                'accept': [
+                    'application/scim+json',
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/scim+json',
+                    'application/json'
+                ]
             },
-            api_client=api_client,
+            api_client=api_client
         )
 
-    def create_user(self, user, **kwargs):
+    def create_user(
+        self,
+        user,
+        **kwargs
+    ):
         """create_user  # noqa: E501
 
         Allows creating a User resource via POST (see section 3.3 of RFC 7644)  # noqa: E501
@@ -420,17 +537,34 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["user"] = user
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['user'] = \
+            user
         return self.create_user_endpoint.call_with_http_info(**kwargs)
 
-    def delete_user_by_id(self, id, **kwargs):
+    def delete_user_by_id(
+        self,
+        id,
+        **kwargs
+    ):
         """delete_user_by_id  # noqa: E501
 
         Deletes a user resource  # noqa: E501
@@ -469,17 +603,34 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["id"] = id
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
         return self.delete_user_by_id_endpoint.call_with_http_info(**kwargs)
 
-    def get_user_by_id(self, id, **kwargs):
+    def get_user_by_id(
+        self,
+        id,
+        **kwargs
+    ):
         """get_user_by_id  # noqa: E501
 
         Retrieves a User resource by Id (see section 3.4.1 of RFC 7644)  # noqa: E501
@@ -520,17 +671,33 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["id"] = id
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
         return self.get_user_by_id_endpoint.call_with_http_info(**kwargs)
 
-    def get_users(self, **kwargs):
+    def get_users(
+        self,
+        **kwargs
+    ):
         """get_users  # noqa: E501
 
         Query User resources (see section 3.4.2 of RFC 7644)  # noqa: E501
@@ -574,16 +741,33 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
         return self.get_users_endpoint.call_with_http_info(**kwargs)
 
-    def patch_user_by_id(self, id, request, **kwargs):
+    def patch_user_by_id(
+        self,
+        id,
+        request,
+        **kwargs
+    ):
         """patch_user_by_id  # noqa: E501
 
         Updates one or more attributes of a User resource using a sequence of additions, removals, and  replacements operations. See section 3.5.2 of RFC 7644   # noqa: E501
@@ -625,18 +809,36 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["id"] = id
-        kwargs["request"] = request
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
+        kwargs['request'] = \
+            request
         return self.patch_user_by_id_endpoint.call_with_http_info(**kwargs)
 
-    def search_user(self, search_request, **kwargs):
+    def search_user(
+        self,
+        search_request,
+        **kwargs
+    ):
         """search_user  # noqa: E501
 
         Query User resources (see section 3.4.2 of RFC 7644)  # noqa: E501
@@ -675,17 +877,35 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["search_request"] = search_request
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['search_request'] = \
+            search_request
         return self.search_user_endpoint.call_with_http_info(**kwargs)
 
-    def update_user_by_id(self, id, user, **kwargs):
+    def update_user_by_id(
+        self,
+        id,
+        user,
+        **kwargs
+    ):
         """update_user_by_id  # noqa: E501
 
         Updates a User resource (see section 3.5.1 of RFC 7644). Update works in a replacement fashion&amp;#58; every attribute value found in the payload sent will replace the one in the existing resource representation. Attributes  not passed in the payload will be left intact.   # noqa: E501
@@ -727,13 +947,28 @@ class UserApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs["async_req"] = kwargs.get("async_req", False)
-        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
-        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
-        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
-        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
-        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
-        kwargs["_host_index"] = kwargs.get("_host_index")
-        kwargs["id"] = id
-        kwargs["user"] = user
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
+        kwargs['user'] = \
+            user
         return self.update_user_by_id_endpoint.call_with_http_info(**kwargs)
+
