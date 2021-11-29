@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.basic_list_response import BasicListResponse
 from pyscim.model.generic_list_response_all_of import GenericListResponseAllOf
 from pyscim.model.generic_resource import GenericResource
-globals()['BasicListResponse'] = BasicListResponse
-globals()['GenericListResponseAllOf'] = GenericListResponseAllOf
-globals()['GenericResource'] = GenericResource
+
+globals()["BasicListResponse"] = BasicListResponse
+globals()["GenericListResponseAllOf"] = GenericListResponseAllOf
+globals()["GenericResource"] = GenericResource
 from pyscim.model.generic_list_response import GenericListResponse
 
 
@@ -37,5 +38,5 @@ class TestGenericListResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

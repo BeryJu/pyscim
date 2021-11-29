@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.schema_resource import SchemaResource
-globals()['SchemaResource'] = SchemaResource
+
+globals()["SchemaResource"] = SchemaResource
 from pyscim.model.schema_list_response_all_of import SchemaListResponseAllOf
 
 
@@ -33,5 +34,5 @@ class TestSchemaListResponseAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

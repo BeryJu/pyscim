@@ -14,10 +14,13 @@ import unittest
 import pyscim
 from pyscim.model.basic_list_response import BasicListResponse
 from pyscim.model.resource_type import ResourceType
-from pyscim.model.resource_type_list_response_all_of import ResourceTypeListResponseAllOf
-globals()['BasicListResponse'] = BasicListResponse
-globals()['ResourceType'] = ResourceType
-globals()['ResourceTypeListResponseAllOf'] = ResourceTypeListResponseAllOf
+from pyscim.model.resource_type_list_response_all_of import (
+    ResourceTypeListResponseAllOf,
+)
+
+globals()["BasicListResponse"] = BasicListResponse
+globals()["ResourceType"] = ResourceType
+globals()["ResourceTypeListResponseAllOf"] = ResourceTypeListResponseAllOf
 from pyscim.model.resource_type_list_response import ResourceTypeListResponse
 
 
@@ -37,5 +40,5 @@ class TestResourceTypeListResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

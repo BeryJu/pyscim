@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import pyscim
-from pyscim.model.service_provider_config_response_authentication_schemes import ServiceProviderConfigResponseAuthenticationSchemes
+from pyscim.model.service_provider_config_response_authentication_schemes import (
+    ServiceProviderConfigResponseAuthenticationSchemes,
+)
 
 
 class TestServiceProviderConfigResponseAuthenticationSchemes(unittest.TestCase):
@@ -31,5 +33,5 @@ class TestServiceProviderConfigResponseAuthenticationSchemes(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

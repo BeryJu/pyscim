@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.group_resource import GroupResource
-globals()['GroupResource'] = GroupResource
+
+globals()["GroupResource"] = GroupResource
 from pyscim.model.group_list_response_all_of import GroupListResponseAllOf
 
 
@@ -33,5 +34,5 @@ class TestGroupListResponseAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

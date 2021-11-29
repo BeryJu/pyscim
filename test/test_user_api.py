@@ -24,47 +24,33 @@ class TestUserApi(unittest.TestCase):
         pass
 
     def test_create_user(self):
-        """Test case for create_user
-
-        """
+        """Test case for create_user"""
         pass
 
     def test_delete_user_by_id(self):
-        """Test case for delete_user_by_id
-
-        """
+        """Test case for delete_user_by_id"""
         pass
 
     def test_get_user_by_id(self):
-        """Test case for get_user_by_id
-
-        """
+        """Test case for get_user_by_id"""
         pass
 
     def test_get_users(self):
-        """Test case for get_users
-
-        """
+        """Test case for get_users"""
         pass
 
     def test_patch_user_by_id(self):
-        """Test case for patch_user_by_id
-
-        """
+        """Test case for patch_user_by_id"""
         pass
 
     def test_search_user(self):
-        """Test case for search_user
-
-        """
+        """Test case for search_user"""
         pass
 
     def test_update_user_by_id(self):
-        """Test case for update_user_by_id
-
-        """
+        """Test case for update_user_by_id"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

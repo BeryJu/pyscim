@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.member import Member
-globals()['Member'] = Member
+
+globals()["Member"] = Member
 from pyscim.model.group_resource_all_of import GroupResourceAllOf
 
 
@@ -33,5 +34,5 @@ class TestGroupResourceAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

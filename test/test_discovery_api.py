@@ -24,35 +24,25 @@ class TestDiscoveryApi(unittest.TestCase):
         pass
 
     def test_get_resource_type_by_id(self):
-        """Test case for get_resource_type_by_id
-
-        """
+        """Test case for get_resource_type_by_id"""
         pass
 
     def test_get_resource_types(self):
-        """Test case for get_resource_types
-
-        """
+        """Test case for get_resource_types"""
         pass
 
     def test_get_schema_by_uri(self):
-        """Test case for get_schema_by_uri
-
-        """
+        """Test case for get_schema_by_uri"""
         pass
 
     def test_get_schemas(self):
-        """Test case for get_schemas
-
-        """
+        """Test case for get_schemas"""
         pass
 
     def test_get_service_provider_config(self):
-        """Test case for get_service_provider_config
-
-        """
+        """Test case for get_service_provider_config"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

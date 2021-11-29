@@ -13,9 +13,12 @@ import unittest
 
 import pyscim
 from pyscim.model.resource_type_schema_extensions import ResourceTypeSchemaExtensions
-from pyscim.model.service_provider_config_response_meta import ServiceProviderConfigResponseMeta
-globals()['ResourceTypeSchemaExtensions'] = ResourceTypeSchemaExtensions
-globals()['ServiceProviderConfigResponseMeta'] = ServiceProviderConfigResponseMeta
+from pyscim.model.service_provider_config_response_meta import (
+    ServiceProviderConfigResponseMeta,
+)
+
+globals()["ResourceTypeSchemaExtensions"] = ResourceTypeSchemaExtensions
+globals()["ServiceProviderConfigResponseMeta"] = ServiceProviderConfigResponseMeta
 from pyscim.model.resource_type import ResourceType
 
 
@@ -35,5 +38,5 @@ class TestResourceType(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.base_resource import BaseResource
 from pyscim.model.fido_device_resource_all_of import FidoDeviceResourceAllOf
 from pyscim.model.meta import Meta
-globals()['BaseResource'] = BaseResource
-globals()['FidoDeviceResourceAllOf'] = FidoDeviceResourceAllOf
-globals()['Meta'] = Meta
+
+globals()["BaseResource"] = BaseResource
+globals()["FidoDeviceResourceAllOf"] = FidoDeviceResourceAllOf
+globals()["Meta"] = Meta
 from pyscim.model.fido_device_resource import FidoDeviceResource
 
 
@@ -37,5 +38,5 @@ class TestFidoDeviceResource(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

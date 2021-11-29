@@ -12,16 +12,29 @@ import sys
 import unittest
 
 import pyscim
-from pyscim.model.service_provider_config_response_authentication_schemes import ServiceProviderConfigResponseAuthenticationSchemes
-from pyscim.model.service_provider_config_response_bulk import ServiceProviderConfigResponseBulk
-from pyscim.model.service_provider_config_response_filter import ServiceProviderConfigResponseFilter
-from pyscim.model.service_provider_config_response_meta import ServiceProviderConfigResponseMeta
-from pyscim.model.service_provider_config_response_patch import ServiceProviderConfigResponsePatch
-globals()['ServiceProviderConfigResponseAuthenticationSchemes'] = ServiceProviderConfigResponseAuthenticationSchemes
-globals()['ServiceProviderConfigResponseBulk'] = ServiceProviderConfigResponseBulk
-globals()['ServiceProviderConfigResponseFilter'] = ServiceProviderConfigResponseFilter
-globals()['ServiceProviderConfigResponseMeta'] = ServiceProviderConfigResponseMeta
-globals()['ServiceProviderConfigResponsePatch'] = ServiceProviderConfigResponsePatch
+from pyscim.model.service_provider_config_response_authentication_schemes import (
+    ServiceProviderConfigResponseAuthenticationSchemes,
+)
+from pyscim.model.service_provider_config_response_bulk import (
+    ServiceProviderConfigResponseBulk,
+)
+from pyscim.model.service_provider_config_response_filter import (
+    ServiceProviderConfigResponseFilter,
+)
+from pyscim.model.service_provider_config_response_meta import (
+    ServiceProviderConfigResponseMeta,
+)
+from pyscim.model.service_provider_config_response_patch import (
+    ServiceProviderConfigResponsePatch,
+)
+
+globals()[
+    "ServiceProviderConfigResponseAuthenticationSchemes"
+] = ServiceProviderConfigResponseAuthenticationSchemes
+globals()["ServiceProviderConfigResponseBulk"] = ServiceProviderConfigResponseBulk
+globals()["ServiceProviderConfigResponseFilter"] = ServiceProviderConfigResponseFilter
+globals()["ServiceProviderConfigResponseMeta"] = ServiceProviderConfigResponseMeta
+globals()["ServiceProviderConfigResponsePatch"] = ServiceProviderConfigResponsePatch
 from pyscim.model.service_provider_config_response import ServiceProviderConfigResponse
 
 
@@ -41,5 +54,5 @@ class TestServiceProviderConfigResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

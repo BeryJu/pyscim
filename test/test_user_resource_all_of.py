@@ -22,16 +22,17 @@ from pyscim.model.phone_number import PhoneNumber
 from pyscim.model.photo import Photo
 from pyscim.model.role import Role
 from pyscim.model.x509_certificate import X509Certificate
-globals()['Address'] = Address
-globals()['Email'] = Email
-globals()['Entitlement'] = Entitlement
-globals()['Group'] = Group
-globals()['InstantMessagingAddress'] = InstantMessagingAddress
-globals()['Name'] = Name
-globals()['PhoneNumber'] = PhoneNumber
-globals()['Photo'] = Photo
-globals()['Role'] = Role
-globals()['X509Certificate'] = X509Certificate
+
+globals()["Address"] = Address
+globals()["Email"] = Email
+globals()["Entitlement"] = Entitlement
+globals()["Group"] = Group
+globals()["InstantMessagingAddress"] = InstantMessagingAddress
+globals()["Name"] = Name
+globals()["PhoneNumber"] = PhoneNumber
+globals()["Photo"] = Photo
+globals()["Role"] = Role
+globals()["X509Certificate"] = X509Certificate
 from pyscim.model.user_resource_all_of import UserResourceAllOf
 
 
@@ -51,5 +52,5 @@ class TestUserResourceAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

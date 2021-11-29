@@ -19,7 +19,7 @@ from pyscim.model_utils import (  # noqa: F401
     datetime,
     file_type,
     none_type,
-    validate_and_convert_types
+    validate_and_convert_types,
 )
 from pyscim.model.error_response import ErrorResponse
 from pyscim.model.group_list_response import GroupListResponse
@@ -41,462 +41,345 @@ class GroupApi(object):
         self.api_client = api_client
         self.create_group_endpoint = _Endpoint(
             settings={
-                'response_type': (GroupResource,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups',
-                'operation_id': 'create_group',
-                'http_method': 'POST',
-                'servers': None,
+                "response_type": (GroupResource,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups",
+                "operation_id": "create_group",
+                "http_method": "POST",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'group',
-                    'attributes',
-                    'excluded_attributes',
+                "all": [
+                    "group",
+                    "attributes",
+                    "excluded_attributes",
                 ],
-                'required': [
-                    'group',
+                "required": [
+                    "group",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "group": (GroupResource,),
+                    "attributes": (str,),
+                    "excluded_attributes": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "attributes": "attributes",
+                    "excluded_attributes": "excludedAttributes",
                 },
-                'openapi_types': {
-                    'group':
-                        (GroupResource,),
-                    'attributes':
-                        (str,),
-                    'excluded_attributes':
-                        (str,),
+                "location_map": {
+                    "group": "body",
+                    "attributes": "query",
+                    "excluded_attributes": "query",
                 },
-                'attribute_map': {
-                    'attributes': 'attributes',
-                    'excluded_attributes': 'excludedAttributes',
-                },
-                'location_map': {
-                    'group': 'body',
-                    'attributes': 'query',
-                    'excluded_attributes': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [
-                    'application/scim+json',
-                    'application/json'
-                ]
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": ["application/scim+json", "application/json"],
             },
-            api_client=api_client
+            api_client=api_client,
         )
         self.delete_group_by_id_endpoint = _Endpoint(
             settings={
-                'response_type': None,
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups/{id}',
-                'operation_id': 'delete_group_by_id',
-                'http_method': 'DELETE',
-                'servers': None,
+                "response_type": None,
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups/{id}",
+                "operation_id": "delete_group_by_id",
+                "http_method": "DELETE",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'id',
+                "all": [
+                    "id",
                 ],
-                'required': [
-                    'id',
+                "required": [
+                    "id",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "id": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "id": "id",
                 },
-                'openapi_types': {
-                    'id':
-                        (str,),
+                "location_map": {
+                    "id": "path",
                 },
-                'attribute_map': {
-                    'id': 'id',
-                },
-                'location_map': {
-                    'id': 'path',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [],
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": [],
             },
-            api_client=api_client
+            api_client=api_client,
         )
         self.get_group_by_id_endpoint = _Endpoint(
             settings={
-                'response_type': (GroupResource,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups/{id}',
-                'operation_id': 'get_group_by_id',
-                'http_method': 'GET',
-                'servers': None,
+                "response_type": (GroupResource,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups/{id}",
+                "operation_id": "get_group_by_id",
+                "http_method": "GET",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'id',
-                    'attributes',
-                    'excluded_attributes',
+                "all": [
+                    "id",
+                    "attributes",
+                    "excluded_attributes",
                 ],
-                'required': [
-                    'id',
+                "required": [
+                    "id",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "id": (str,),
+                    "attributes": (str,),
+                    "excluded_attributes": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "id": "id",
+                    "attributes": "attributes",
+                    "excluded_attributes": "excludedAttributes",
                 },
-                'openapi_types': {
-                    'id':
-                        (str,),
-                    'attributes':
-                        (str,),
-                    'excluded_attributes':
-                        (str,),
+                "location_map": {
+                    "id": "path",
+                    "attributes": "query",
+                    "excluded_attributes": "query",
                 },
-                'attribute_map': {
-                    'id': 'id',
-                    'attributes': 'attributes',
-                    'excluded_attributes': 'excludedAttributes',
-                },
-                'location_map': {
-                    'id': 'path',
-                    'attributes': 'query',
-                    'excluded_attributes': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [],
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": [],
             },
-            api_client=api_client
+            api_client=api_client,
         )
         self.get_groups_endpoint = _Endpoint(
             settings={
-                'response_type': (GroupListResponse,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups',
-                'operation_id': 'get_groups',
-                'http_method': 'GET',
-                'servers': None,
+                "response_type": (GroupListResponse,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups",
+                "operation_id": "get_groups",
+                "http_method": "GET",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'attributes',
-                    'excluded_attributes',
-                    'filter',
-                    'start_index',
-                    'count',
-                    'sort_by',
-                    'sort_order',
+                "all": [
+                    "attributes",
+                    "excluded_attributes",
+                    "filter",
+                    "start_index",
+                    "count",
+                    "sort_by",
+                    "sort_order",
                 ],
-                'required': [],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "required": [],
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "attributes": (str,),
+                    "excluded_attributes": (str,),
+                    "filter": (str,),
+                    "start_index": (int,),
+                    "count": (int,),
+                    "sort_by": (str,),
+                    "sort_order": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "attributes": "attributes",
+                    "excluded_attributes": "excludedAttributes",
+                    "filter": "filter",
+                    "start_index": "startIndex",
+                    "count": "count",
+                    "sort_by": "sortBy",
+                    "sort_order": "sortOrder",
                 },
-                'openapi_types': {
-                    'attributes':
-                        (str,),
-                    'excluded_attributes':
-                        (str,),
-                    'filter':
-                        (str,),
-                    'start_index':
-                        (int,),
-                    'count':
-                        (int,),
-                    'sort_by':
-                        (str,),
-                    'sort_order':
-                        (str,),
+                "location_map": {
+                    "attributes": "query",
+                    "excluded_attributes": "query",
+                    "filter": "query",
+                    "start_index": "query",
+                    "count": "query",
+                    "sort_by": "query",
+                    "sort_order": "query",
                 },
-                'attribute_map': {
-                    'attributes': 'attributes',
-                    'excluded_attributes': 'excludedAttributes',
-                    'filter': 'filter',
-                    'start_index': 'startIndex',
-                    'count': 'count',
-                    'sort_by': 'sortBy',
-                    'sort_order': 'sortOrder',
-                },
-                'location_map': {
-                    'attributes': 'query',
-                    'excluded_attributes': 'query',
-                    'filter': 'query',
-                    'start_index': 'query',
-                    'count': 'query',
-                    'sort_by': 'query',
-                    'sort_order': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [],
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": [],
             },
-            api_client=api_client
+            api_client=api_client,
         )
         self.patch_group_by_id_endpoint = _Endpoint(
             settings={
-                'response_type': (GroupResource,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups/{id}',
-                'operation_id': 'patch_group_by_id',
-                'http_method': 'PATCH',
-                'servers': None,
+                "response_type": (GroupResource,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups/{id}",
+                "operation_id": "patch_group_by_id",
+                "http_method": "PATCH",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'id',
-                    'request',
-                    'attributes',
-                    'excluded_attributes',
+                "all": [
+                    "id",
+                    "request",
+                    "attributes",
+                    "excluded_attributes",
                 ],
-                'required': [
-                    'id',
-                    'request',
+                "required": [
+                    "id",
+                    "request",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "id": (str,),
+                    "request": (PatchRequest,),
+                    "attributes": (str,),
+                    "excluded_attributes": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "id": "id",
+                    "attributes": "attributes",
+                    "excluded_attributes": "excludedAttributes",
                 },
-                'openapi_types': {
-                    'id':
-                        (str,),
-                    'request':
-                        (PatchRequest,),
-                    'attributes':
-                        (str,),
-                    'excluded_attributes':
-                        (str,),
+                "location_map": {
+                    "id": "path",
+                    "request": "body",
+                    "attributes": "query",
+                    "excluded_attributes": "query",
                 },
-                'attribute_map': {
-                    'id': 'id',
-                    'attributes': 'attributes',
-                    'excluded_attributes': 'excludedAttributes',
-                },
-                'location_map': {
-                    'id': 'path',
-                    'request': 'body',
-                    'attributes': 'query',
-                    'excluded_attributes': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [
-                    'application/scim+json',
-                    'application/json'
-                ]
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": ["application/scim+json", "application/json"],
             },
-            api_client=api_client
+            api_client=api_client,
         )
         self.search_group_endpoint = _Endpoint(
             settings={
-                'response_type': (GroupListResponse,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups/.search',
-                'operation_id': 'search_group',
-                'http_method': 'POST',
-                'servers': None,
+                "response_type": (GroupListResponse,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups/.search",
+                "operation_id": "search_group",
+                "http_method": "POST",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'search_request',
+                "all": [
+                    "search_request",
                 ],
-                'required': [
-                    'search_request',
+                "required": [
+                    "search_request",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "search_request": (SearchRequest,),
                 },
-                'allowed_values': {
+                "attribute_map": {},
+                "location_map": {
+                    "search_request": "body",
                 },
-                'openapi_types': {
-                    'search_request':
-                        (SearchRequest,),
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                    'search_request': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [
-                    'application/scim+json',
-                    'application/json'
-                ]
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": ["application/scim+json", "application/json"],
             },
-            api_client=api_client
+            api_client=api_client,
         )
         self.update_group_by_id_endpoint = _Endpoint(
             settings={
-                'response_type': (GroupResource,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/Groups/{id}',
-                'operation_id': 'update_group_by_id',
-                'http_method': 'PUT',
-                'servers': None,
+                "response_type": (GroupResource,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/Groups/{id}",
+                "operation_id": "update_group_by_id",
+                "http_method": "PUT",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'id',
-                    'group',
-                    'attributes',
-                    'excluded_attributes',
+                "all": [
+                    "id",
+                    "group",
+                    "attributes",
+                    "excluded_attributes",
                 ],
-                'required': [
-                    'id',
-                    'group',
+                "required": [
+                    "id",
+                    "group",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "id": (str,),
+                    "group": (GroupResource,),
+                    "attributes": (str,),
+                    "excluded_attributes": (str,),
                 },
-                'allowed_values': {
+                "attribute_map": {
+                    "id": "id",
+                    "attributes": "attributes",
+                    "excluded_attributes": "excludedAttributes",
                 },
-                'openapi_types': {
-                    'id':
-                        (str,),
-                    'group':
-                        (GroupResource,),
-                    'attributes':
-                        (str,),
-                    'excluded_attributes':
-                        (str,),
+                "location_map": {
+                    "id": "path",
+                    "group": "body",
+                    "attributes": "query",
+                    "excluded_attributes": "query",
                 },
-                'attribute_map': {
-                    'id': 'id',
-                    'attributes': 'attributes',
-                    'excluded_attributes': 'excludedAttributes',
-                },
-                'location_map': {
-                    'id': 'path',
-                    'group': 'body',
-                    'attributes': 'query',
-                    'excluded_attributes': 'query',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [
-                    'application/scim+json',
-                    'application/json'
-                ]
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": ["application/scim+json", "application/json"],
             },
-            api_client=api_client
+            api_client=api_client,
         )
 
-    def create_group(
-        self,
-        group,
-        **kwargs
-    ):
+    def create_group(self, group, **kwargs):
         """create_group  # noqa: E501
 
         Allows creating a Group resource via POST (see section 3.3 of RFC 7644)  # noqa: E501
@@ -537,34 +420,17 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['group'] = \
-            group
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["group"] = group
         return self.create_group_endpoint.call_with_http_info(**kwargs)
 
-    def delete_group_by_id(
-        self,
-        id,
-        **kwargs
-    ):
+    def delete_group_by_id(self, id, **kwargs):
         """delete_group_by_id  # noqa: E501
 
         Deletes a group resource (see section 3.6 of RFC 7644)  # noqa: E501
@@ -603,34 +469,17 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['id'] = \
-            id
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["id"] = id
         return self.delete_group_by_id_endpoint.call_with_http_info(**kwargs)
 
-    def get_group_by_id(
-        self,
-        id,
-        **kwargs
-    ):
+    def get_group_by_id(self, id, **kwargs):
         """get_group_by_id  # noqa: E501
 
         Retrieves a Group resource by Id (see section 3.4.1 of RFC 7644)  # noqa: E501
@@ -671,33 +520,17 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['id'] = \
-            id
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["id"] = id
         return self.get_group_by_id_endpoint.call_with_http_info(**kwargs)
 
-    def get_groups(
-        self,
-        **kwargs
-    ):
+    def get_groups(self, **kwargs):
         """get_groups  # noqa: E501
 
         Query Group resources (see section 3.4.2 of RFC 7644)  # noqa: E501
@@ -741,33 +574,16 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
         return self.get_groups_endpoint.call_with_http_info(**kwargs)
 
-    def patch_group_by_id(
-        self,
-        id,
-        request,
-        **kwargs
-    ):
+    def patch_group_by_id(self, id, request, **kwargs):
         """patch_group_by_id  # noqa: E501
 
         Updates one or more attributes of a Group resource using a sequence of additions, removals, and  replacements operations. See section 3.5.2 of RFC 7644   # noqa: E501
@@ -809,36 +625,18 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['id'] = \
-            id
-        kwargs['request'] = \
-            request
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["id"] = id
+        kwargs["request"] = request
         return self.patch_group_by_id_endpoint.call_with_http_info(**kwargs)
 
-    def search_group(
-        self,
-        search_request,
-        **kwargs
-    ):
+    def search_group(self, search_request, **kwargs):
         """search_group  # noqa: E501
 
         Query Group resources (see section 3.4.2 of RFC 7644)  # noqa: E501
@@ -877,35 +675,17 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['search_request'] = \
-            search_request
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["search_request"] = search_request
         return self.search_group_endpoint.call_with_http_info(**kwargs)
 
-    def update_group_by_id(
-        self,
-        id,
-        group,
-        **kwargs
-    ):
+    def update_group_by_id(self, id, group, **kwargs):
         """update_group_by_id  # noqa: E501
 
         Updates a Group resource (see section 3.5.1 of RFC 7644). Update works in a replacement fashion&amp;#58; every attribute value found in the payload sent will replace the one in the existing resource representation. Attributes  not passed in the payload will be left intact.   # noqa: E501
@@ -947,28 +727,13 @@ class GroupApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['id'] = \
-            id
-        kwargs['group'] = \
-            group
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["id"] = id
+        kwargs["group"] = group
         return self.update_group_by_id_endpoint.call_with_http_info(**kwargs)
-

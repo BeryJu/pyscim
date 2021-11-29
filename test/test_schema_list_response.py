@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.basic_list_response import BasicListResponse
 from pyscim.model.schema_list_response_all_of import SchemaListResponseAllOf
 from pyscim.model.schema_resource import SchemaResource
-globals()['BasicListResponse'] = BasicListResponse
-globals()['SchemaListResponseAllOf'] = SchemaListResponseAllOf
-globals()['SchemaResource'] = SchemaResource
+
+globals()["BasicListResponse"] = BasicListResponse
+globals()["SchemaListResponseAllOf"] = SchemaListResponseAllOf
+globals()["SchemaResource"] = SchemaResource
 from pyscim.model.schema_list_response import SchemaListResponse
 
 
@@ -37,5 +38,5 @@ class TestSchemaListResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.generic_resource import GenericResource
-globals()['GenericResource'] = GenericResource
+
+globals()["GenericResource"] = GenericResource
 from pyscim.model.generic_list_response_all_of import GenericListResponseAllOf
 
 
@@ -33,5 +34,5 @@ class TestGenericListResponseAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

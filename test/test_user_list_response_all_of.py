@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.user_resource import UserResource
-globals()['UserResource'] = UserResource
+
+globals()["UserResource"] = UserResource
 from pyscim.model.user_list_response_all_of import UserListResponseAllOf
 
 
@@ -33,5 +34,5 @@ class TestUserListResponseAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

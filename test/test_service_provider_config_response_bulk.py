@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import pyscim
-from pyscim.model.service_provider_config_response_bulk import ServiceProviderConfigResponseBulk
+from pyscim.model.service_provider_config_response_bulk import (
+    ServiceProviderConfigResponseBulk,
+)
 
 
 class TestServiceProviderConfigResponseBulk(unittest.TestCase):
@@ -31,5 +33,5 @@ class TestServiceProviderConfigResponseBulk(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

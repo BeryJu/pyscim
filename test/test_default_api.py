@@ -24,11 +24,9 @@ class TestDefaultApi(unittest.TestCase):
         pass
 
     def test_bulk_post(self):
-        """Test case for bulk_post
-
-        """
+        """Test case for bulk_post"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -19,7 +19,7 @@ from pyscim.model_utils import (  # noqa: F401
     datetime,
     file_type,
     none_type,
-    validate_and_convert_types
+    validate_and_convert_types,
 )
 from pyscim.model.error_response import ErrorResponse
 from pyscim.model.generic_list_response import GenericListResponse
@@ -39,64 +39,44 @@ class GlobalSearchApi(object):
         self.api_client = api_client
         self.search_resources_endpoint = _Endpoint(
             settings={
-                'response_type': (GenericListResponse,),
-                'auth': [
-                    'scim_oauth'
-                ],
-                'endpoint_path': '/.search',
-                'operation_id': 'search_resources',
-                'http_method': 'POST',
-                'servers': None,
+                "response_type": (GenericListResponse,),
+                "auth": ["scim_oauth"],
+                "endpoint_path": "/.search",
+                "operation_id": "search_resources",
+                "http_method": "POST",
+                "servers": None,
             },
             params_map={
-                'all': [
-                    'search_request',
+                "all": [
+                    "search_request",
                 ],
-                'required': [
-                    'search_request',
+                "required": [
+                    "search_request",
                 ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
+                "nullable": [],
+                "enum": [],
+                "validation": [],
             },
             root_map={
-                'validations': {
+                "validations": {},
+                "allowed_values": {},
+                "openapi_types": {
+                    "search_request": (SearchRequest,),
                 },
-                'allowed_values': {
+                "attribute_map": {},
+                "location_map": {
+                    "search_request": "body",
                 },
-                'openapi_types': {
-                    'search_request':
-                        (SearchRequest,),
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                    'search_request': 'body',
-                },
-                'collection_format_map': {
-                }
+                "collection_format_map": {},
             },
             headers_map={
-                'accept': [
-                    'application/scim+json',
-                    'application/json'
-                ],
-                'content_type': [
-                    'application/scim+json',
-                    'application/json'
-                ]
+                "accept": ["application/scim+json", "application/json"],
+                "content_type": ["application/scim+json", "application/json"],
             },
-            api_client=api_client
+            api_client=api_client,
         )
 
-    def search_resources(
-        self,
-        search_request,
-        **kwargs
-    ):
+    def search_resources(self, search_request, **kwargs):
         """search_resources  # noqa: E501
 
         Search (from system root) for one or more resource (see section 3.4.3 of RFC 7644)   # noqa: E501
@@ -135,26 +115,12 @@ class GlobalSearchApi(object):
                 If the method is called asynchronously, returns the request
                 thread.
         """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['search_request'] = \
-            search_request
+        kwargs["async_req"] = kwargs.get("async_req", False)
+        kwargs["_return_http_data_only"] = kwargs.get("_return_http_data_only", True)
+        kwargs["_preload_content"] = kwargs.get("_preload_content", True)
+        kwargs["_request_timeout"] = kwargs.get("_request_timeout", None)
+        kwargs["_check_input_type"] = kwargs.get("_check_input_type", True)
+        kwargs["_check_return_type"] = kwargs.get("_check_return_type", True)
+        kwargs["_host_index"] = kwargs.get("_host_index")
+        kwargs["search_request"] = search_request
         return self.search_resources_endpoint.call_with_http_info(**kwargs)
-

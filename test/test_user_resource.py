@@ -25,19 +25,20 @@ from pyscim.model.photo import Photo
 from pyscim.model.role import Role
 from pyscim.model.user_resource_all_of import UserResourceAllOf
 from pyscim.model.x509_certificate import X509Certificate
-globals()['Address'] = Address
-globals()['BaseResource'] = BaseResource
-globals()['Email'] = Email
-globals()['Entitlement'] = Entitlement
-globals()['Group'] = Group
-globals()['InstantMessagingAddress'] = InstantMessagingAddress
-globals()['Meta'] = Meta
-globals()['Name'] = Name
-globals()['PhoneNumber'] = PhoneNumber
-globals()['Photo'] = Photo
-globals()['Role'] = Role
-globals()['UserResourceAllOf'] = UserResourceAllOf
-globals()['X509Certificate'] = X509Certificate
+
+globals()["Address"] = Address
+globals()["BaseResource"] = BaseResource
+globals()["Email"] = Email
+globals()["Entitlement"] = Entitlement
+globals()["Group"] = Group
+globals()["InstantMessagingAddress"] = InstantMessagingAddress
+globals()["Meta"] = Meta
+globals()["Name"] = Name
+globals()["PhoneNumber"] = PhoneNumber
+globals()["Photo"] = Photo
+globals()["Role"] = Role
+globals()["UserResourceAllOf"] = UserResourceAllOf
+globals()["X509Certificate"] = X509Certificate
 from pyscim.model.user_resource import UserResource
 
 
@@ -57,5 +58,5 @@ class TestUserResource(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.basic_list_response import BasicListResponse
 from pyscim.model.fido_device_resource import FidoDeviceResource
 from pyscim.model.fido_list_response_all_of import FidoListResponseAllOf
-globals()['BasicListResponse'] = BasicListResponse
-globals()['FidoDeviceResource'] = FidoDeviceResource
-globals()['FidoListResponseAllOf'] = FidoListResponseAllOf
+
+globals()["BasicListResponse"] = BasicListResponse
+globals()["FidoDeviceResource"] = FidoDeviceResource
+globals()["FidoListResponseAllOf"] = FidoListResponseAllOf
 from pyscim.model.fido_list_response import FidoListResponse
 
 
@@ -37,5 +38,5 @@ class TestFidoListResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

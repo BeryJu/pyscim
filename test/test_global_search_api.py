@@ -24,11 +24,9 @@ class TestGlobalSearchApi(unittest.TestCase):
         pass
 
     def test_search_resources(self):
-        """Test case for search_resources
-
-        """
+        """Test case for search_resources"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

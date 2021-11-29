@@ -24,47 +24,33 @@ class TestGroupApi(unittest.TestCase):
         pass
 
     def test_create_group(self):
-        """Test case for create_group
-
-        """
+        """Test case for create_group"""
         pass
 
     def test_delete_group_by_id(self):
-        """Test case for delete_group_by_id
-
-        """
+        """Test case for delete_group_by_id"""
         pass
 
     def test_get_group_by_id(self):
-        """Test case for get_group_by_id
-
-        """
+        """Test case for get_group_by_id"""
         pass
 
     def test_get_groups(self):
-        """Test case for get_groups
-
-        """
+        """Test case for get_groups"""
         pass
 
     def test_patch_group_by_id(self):
-        """Test case for patch_group_by_id
-
-        """
+        """Test case for patch_group_by_id"""
         pass
 
     def test_search_group(self):
-        """Test case for search_group
-
-        """
+        """Test case for search_group"""
         pass
 
     def test_update_group_by_id(self):
-        """Test case for update_group_by_id
-
-        """
+        """Test case for update_group_by_id"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

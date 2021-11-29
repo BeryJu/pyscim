@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import pyscim
-from pyscim.model.service_provider_config_response_patch import ServiceProviderConfigResponsePatch
+from pyscim.model.service_provider_config_response_patch import (
+    ServiceProviderConfigResponsePatch,
+)
 
 
 class TestServiceProviderConfigResponsePatch(unittest.TestCase):
@@ -31,5 +33,5 @@ class TestServiceProviderConfigResponsePatch(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -45,7 +45,9 @@ from pyscim.model.phone_number import PhoneNumber
 from pyscim.model.photo import Photo
 from pyscim.model.resource_type import ResourceType
 from pyscim.model.resource_type_list_response import ResourceTypeListResponse
-from pyscim.model.resource_type_list_response_all_of import ResourceTypeListResponseAllOf
+from pyscim.model.resource_type_list_response_all_of import (
+    ResourceTypeListResponseAllOf,
+)
 from pyscim.model.resource_type_schema_extensions import ResourceTypeSchemaExtensions
 from pyscim.model.role import Role
 from pyscim.model.schema_attribute import SchemaAttribute
@@ -54,11 +56,21 @@ from pyscim.model.schema_list_response_all_of import SchemaListResponseAllOf
 from pyscim.model.schema_resource import SchemaResource
 from pyscim.model.search_request import SearchRequest
 from pyscim.model.service_provider_config_response import ServiceProviderConfigResponse
-from pyscim.model.service_provider_config_response_authentication_schemes import ServiceProviderConfigResponseAuthenticationSchemes
-from pyscim.model.service_provider_config_response_bulk import ServiceProviderConfigResponseBulk
-from pyscim.model.service_provider_config_response_filter import ServiceProviderConfigResponseFilter
-from pyscim.model.service_provider_config_response_meta import ServiceProviderConfigResponseMeta
-from pyscim.model.service_provider_config_response_patch import ServiceProviderConfigResponsePatch
+from pyscim.model.service_provider_config_response_authentication_schemes import (
+    ServiceProviderConfigResponseAuthenticationSchemes,
+)
+from pyscim.model.service_provider_config_response_bulk import (
+    ServiceProviderConfigResponseBulk,
+)
+from pyscim.model.service_provider_config_response_filter import (
+    ServiceProviderConfigResponseFilter,
+)
+from pyscim.model.service_provider_config_response_meta import (
+    ServiceProviderConfigResponseMeta,
+)
+from pyscim.model.service_provider_config_response_patch import (
+    ServiceProviderConfigResponsePatch,
+)
 from pyscim.model.user_list_response import UserListResponse
 from pyscim.model.user_list_response_all_of import UserListResponseAllOf
 from pyscim.model.user_resource import UserResource

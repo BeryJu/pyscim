@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.meta import Meta
-globals()['Meta'] = Meta
+
+globals()["Meta"] = Meta
 from pyscim.model.base_resource import BaseResource
 
 
@@ -33,5 +34,5 @@ class TestBaseResource(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

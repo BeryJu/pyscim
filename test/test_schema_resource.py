@@ -13,9 +13,12 @@ import unittest
 
 import pyscim
 from pyscim.model.schema_attribute import SchemaAttribute
-from pyscim.model.service_provider_config_response_meta import ServiceProviderConfigResponseMeta
-globals()['SchemaAttribute'] = SchemaAttribute
-globals()['ServiceProviderConfigResponseMeta'] = ServiceProviderConfigResponseMeta
+from pyscim.model.service_provider_config_response_meta import (
+    ServiceProviderConfigResponseMeta,
+)
+
+globals()["SchemaAttribute"] = SchemaAttribute
+globals()["ServiceProviderConfigResponseMeta"] = ServiceProviderConfigResponseMeta
 from pyscim.model.schema_resource import SchemaResource
 
 
@@ -35,5 +38,5 @@ class TestSchemaResource(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

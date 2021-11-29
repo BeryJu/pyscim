@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.bulk_operation import BulkOperation
-globals()['BulkOperation'] = BulkOperation
+
+globals()["BulkOperation"] = BulkOperation
 from pyscim.model.bulk_data import BulkData
 
 
@@ -33,5 +34,5 @@ class TestBulkData(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

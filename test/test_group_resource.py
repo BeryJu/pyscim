@@ -16,10 +16,11 @@ from pyscim.model.base_resource import BaseResource
 from pyscim.model.group_resource_all_of import GroupResourceAllOf
 from pyscim.model.member import Member
 from pyscim.model.meta import Meta
-globals()['BaseResource'] = BaseResource
-globals()['GroupResourceAllOf'] = GroupResourceAllOf
-globals()['Member'] = Member
-globals()['Meta'] = Meta
+
+globals()["BaseResource"] = BaseResource
+globals()["GroupResourceAllOf"] = GroupResourceAllOf
+globals()["Member"] = Member
+globals()["Meta"] = Meta
 from pyscim.model.group_resource import GroupResource
 
 
@@ -39,5 +40,5 @@ class TestGroupResource(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

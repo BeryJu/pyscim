@@ -28,22 +28,23 @@ from pyscim.model.photo import Photo
 from pyscim.model.role import Role
 from pyscim.model.user_resource import UserResource
 from pyscim.model.x509_certificate import X509Certificate
-globals()['Address'] = Address
-globals()['Email'] = Email
-globals()['Entitlement'] = Entitlement
-globals()['Fido2DeviceResource'] = Fido2DeviceResource
-globals()['FidoDeviceResource'] = FidoDeviceResource
-globals()['Group'] = Group
-globals()['GroupResource'] = GroupResource
-globals()['InstantMessagingAddress'] = InstantMessagingAddress
-globals()['Member'] = Member
-globals()['Meta'] = Meta
-globals()['Name'] = Name
-globals()['PhoneNumber'] = PhoneNumber
-globals()['Photo'] = Photo
-globals()['Role'] = Role
-globals()['UserResource'] = UserResource
-globals()['X509Certificate'] = X509Certificate
+
+globals()["Address"] = Address
+globals()["Email"] = Email
+globals()["Entitlement"] = Entitlement
+globals()["Fido2DeviceResource"] = Fido2DeviceResource
+globals()["FidoDeviceResource"] = FidoDeviceResource
+globals()["Group"] = Group
+globals()["GroupResource"] = GroupResource
+globals()["InstantMessagingAddress"] = InstantMessagingAddress
+globals()["Member"] = Member
+globals()["Meta"] = Meta
+globals()["Name"] = Name
+globals()["PhoneNumber"] = PhoneNumber
+globals()["Photo"] = Photo
+globals()["Role"] = Role
+globals()["UserResource"] = UserResource
+globals()["X509Certificate"] = X509Certificate
 from pyscim.model.generic_resource import GenericResource
 
 
@@ -63,5 +64,5 @@ class TestGenericResource(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

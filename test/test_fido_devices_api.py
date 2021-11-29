@@ -24,35 +24,25 @@ class TestFidoDevicesApi(unittest.TestCase):
         pass
 
     def test_delete_fido_device_by_id(self):
-        """Test case for delete_fido_device_by_id
-
-        """
+        """Test case for delete_fido_device_by_id"""
         pass
 
     def test_get_fido_device_by_id(self):
-        """Test case for get_fido_device_by_id
-
-        """
+        """Test case for get_fido_device_by_id"""
         pass
 
     def test_get_fido_devices(self):
-        """Test case for get_fido_devices
-
-        """
+        """Test case for get_fido_devices"""
         pass
 
     def test_search_fido_device(self):
-        """Test case for search_fido_device
-
-        """
+        """Test case for search_fido_device"""
         pass
 
     def test_update_fido_device_by_id(self):
-        """Test case for update_fido_device_by_id
-
-        """
+        """Test case for update_fido_device_by_id"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

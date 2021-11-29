@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.basic_list_response import BasicListResponse
 from pyscim.model.user_list_response_all_of import UserListResponseAllOf
 from pyscim.model.user_resource import UserResource
-globals()['BasicListResponse'] = BasicListResponse
-globals()['UserListResponseAllOf'] = UserListResponseAllOf
-globals()['UserResource'] = UserResource
+
+globals()["BasicListResponse"] = BasicListResponse
+globals()["UserListResponseAllOf"] = UserListResponseAllOf
+globals()["UserResource"] = UserResource
 from pyscim.model.user_list_response import UserListResponse
 
 
@@ -37,5 +38,5 @@ class TestUserListResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

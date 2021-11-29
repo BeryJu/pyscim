@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.patch_operation import PatchOperation
-globals()['PatchOperation'] = PatchOperation
+
+globals()["PatchOperation"] = PatchOperation
 from pyscim.model.patch_request import PatchRequest
 
 
@@ -33,5 +34,5 @@ class TestPatchRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

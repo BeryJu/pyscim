@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.bulk_data import BulkData
 from pyscim.model.bulk_operation import BulkOperation
 from pyscim.model.bulk_request_all_of import BulkRequestAllOf
-globals()['BulkData'] = BulkData
-globals()['BulkOperation'] = BulkOperation
-globals()['BulkRequestAllOf'] = BulkRequestAllOf
+
+globals()["BulkData"] = BulkData
+globals()["BulkOperation"] = BulkOperation
+globals()["BulkRequestAllOf"] = BulkRequestAllOf
 from pyscim.model.bulk_request import BulkRequest
 
 
@@ -37,5 +38,5 @@ class TestBulkRequest(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

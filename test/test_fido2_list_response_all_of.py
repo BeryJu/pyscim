@@ -13,7 +13,8 @@ import unittest
 
 import pyscim
 from pyscim.model.fido2_device_resource import Fido2DeviceResource
-globals()['Fido2DeviceResource'] = Fido2DeviceResource
+
+globals()["Fido2DeviceResource"] = Fido2DeviceResource
 from pyscim.model.fido2_list_response_all_of import Fido2ListResponseAllOf
 
 
@@ -33,5 +34,5 @@ class TestFido2ListResponseAllOf(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

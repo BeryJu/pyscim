@@ -15,9 +15,10 @@ import pyscim
 from pyscim.model.basic_list_response import BasicListResponse
 from pyscim.model.group_list_response_all_of import GroupListResponseAllOf
 from pyscim.model.group_resource import GroupResource
-globals()['BasicListResponse'] = BasicListResponse
-globals()['GroupListResponseAllOf'] = GroupListResponseAllOf
-globals()['GroupResource'] = GroupResource
+
+globals()["BasicListResponse"] = BasicListResponse
+globals()["GroupListResponseAllOf"] = GroupListResponseAllOf
+globals()["GroupResource"] = GroupResource
 from pyscim.model.group_list_response import GroupListResponse
 
 
@@ -37,5 +38,5 @@ class TestGroupListResponse(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
