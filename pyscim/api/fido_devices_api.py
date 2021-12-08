@@ -405,6 +405,9 @@ class FidoDevicesApi(object):
             _check_return_type (bool): specifies if type checking
                 should be done one the data received from the server.
                 Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
             _host_index (int/None): specifies the index of the server
                 that we want to use.
                 Default is read from the configuration.
@@ -433,6 +436,8 @@ class FidoDevicesApi(object):
         kwargs['_check_return_type'] = kwargs.get(
             '_check_return_type', True
         )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['id'] = \
             id
@@ -474,6 +479,9 @@ class FidoDevicesApi(object):
             _check_return_type (bool): specifies if type checking
                 should be done one the data received from the server.
                 Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
             _host_index (int/None): specifies the index of the server
                 that we want to use.
                 Default is read from the configuration.
@@ -502,6 +510,8 @@ class FidoDevicesApi(object):
         kwargs['_check_return_type'] = kwargs.get(
             '_check_return_type', True
         )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['id'] = \
             id
@@ -545,6 +555,9 @@ class FidoDevicesApi(object):
             _check_return_type (bool): specifies if type checking
                 should be done one the data received from the server.
                 Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
             _host_index (int/None): specifies the index of the server
                 that we want to use.
                 Default is read from the configuration.
@@ -573,6 +586,8 @@ class FidoDevicesApi(object):
         kwargs['_check_return_type'] = kwargs.get(
             '_check_return_type', True
         )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         return self.get_fido_devices_endpoint.call_with_http_info(**kwargs)
 
@@ -610,6 +625,9 @@ class FidoDevicesApi(object):
             _check_return_type (bool): specifies if type checking
                 should be done one the data received from the server.
                 Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
             _host_index (int/None): specifies the index of the server
                 that we want to use.
                 Default is read from the configuration.
@@ -638,6 +656,8 @@ class FidoDevicesApi(object):
         kwargs['_check_return_type'] = kwargs.get(
             '_check_return_type', True
         )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['search_request'] = \
             search_request
@@ -680,6 +700,9 @@ class FidoDevicesApi(object):
             _check_return_type (bool): specifies if type checking
                 should be done one the data received from the server.
                 Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
             _host_index (int/None): specifies the index of the server
                 that we want to use.
                 Default is read from the configuration.
@@ -708,6 +731,8 @@ class FidoDevicesApi(object):
         kwargs['_check_return_type'] = kwargs.get(
             '_check_return_type', True
         )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['id'] = \
             id
